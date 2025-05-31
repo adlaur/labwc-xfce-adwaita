@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+  <!-- Note: for localization support of menu items "client-menu" has to be removed here -->
+  <menu id="client-menu">
+    <item label="Minimize">
+      <action name="Iconify"/>
+    </item>
+    <item label="Maximize">
+      <action name="ToggleMaximize"/>
+    </item>
+    <item label="Fullscreen">
+      <action name="ToggleFullscreen"/>
+    </item>
+    <item label="Roll Up/Down">
+      <action name="ToggleShade"/>
+    </item>
+    <item label="Decorations">
+      <action name="ToggleDecorations"/>
+    </item>
+    <item label="Always on Top">
+      <action name="ToggleAlwaysOnTop"/>
+    </item>
+    <!--
+    Any menu with the id "workspaces" will be hidden
+    if there is only a single workspace available.
+  -->
+    <menu id="workspaces" label="Workspace">
+      <item label="Move Left">
+        <action name="SendToDesktop" to="left"/>
+      </item>
+      <item label="Move Right">
+        <action name="SendToDesktop" to="right"/>
+      </item>
+      <separator/>
+      <item label="Always on Visible Workspace">
+        <action name="ToggleOmnipresent"/>
+      </item>
+    </menu>
+    <!--
+    openbox default workspace selector
+    to use replace above workspace menu with the example below
+    the label is required, but you can change the text.
+
+    <menu id="client-send-to-menu" label="Send to..." />
+  -->
+    <item label="Close">
+      <action name="Close"/>
+    </item>
+  </menu>
+  <menu id="root-menu" label="root-menu">
+    <menu id="Accessories" label="Accessories" icon="applications-accessories">
+      <item label="Disk Usage Analyzer" icon="org.gnome.baobab">
+        <action name="Execute">
+          <command>baobab</command>
+        </action>
+      </item>
+      <item label="File Manager PCManFM" icon="synaptic">
+        <action name="Execute">
+          <command>pcmanfm</command>
+        </action>
+      </item>
+      <item label="GVim" icon="gvim">
+        <action name="Execute">
+          <command>gvim -f</command>
+        </action>
+      </item>
+      <item label="KeePassXC" icon="keepassxc">
+        <action name="Execute">
+          <command>keepassxc</command>
+        </action>
+      </item>
+      <item label="Vim" icon="gvim">
+        <action name="Execute">
+          <command>vim</command>
+        </action>
+      </item>
+    </menu>
+    <!-- Accessories -->
+    <menu id="Education" label="Education" icon="applications-science">
+      <item label="Anki" icon="anki">
+        <action name="Execute">
+          <command>anki</command>
+        </action>
+      </item>
+    </menu>
+    <!-- Education -->
+    <menu id="Graphics" label="Graphics" icon="applications-graphics">
+      <item label="GPicView" icon="gpicview">
+        <action name="Execute">
+          <command>gpicview</command>
+        </action>
+      </item>
+      <item label="ImageMagick (color depth=q16)" icon="display-im7.q16">
+        <action name="Execute">
+          <command>/usr/bin/display-im7.q16 -nostdin</command>
+        </action>
+      </item>
+    </menu>
+    <!-- Graphics -->
+    <menu id="Internet" label="Internet" icon="applications-internet">
+      <item label="Firefox" icon="firefox">
+        <action name="Execute">
+          <command>firefox</command>
+        </action>
+      </item>
+      <item label="GlobalProtect VPN" icon="com.yuezk.qt.gpclient">
+        <action name="Execute">
+          <command>env QT_AUTO_SCREEN_SCALE_FACTOR=1 /usr/bin/gpclient</command>
+        </action>
+      </item>
+      <item label="Google Earth" icon="google-earth-pro">
+        <action name="Execute">
+          <command>/opt/google/earth/pro/google-earth-pro</command>
+        </action>
+      </item>
+      <item label="Start Syncthing" icon="syncthing">
+        <action name="Execute">
+          <command>syncthing serve --no-browser --logfile=default</command>
+        </action>
+      </item>
+      <item label="Syncthing Web UI" icon="syncthing">
+        <action name="Execute">
+          <command>syncthing --browser-only</command>
+        </action>
+      </item>
+    </menu>
+    <!-- Internet -->
+    <menu id="Multimedia" label="Multimedia" icon="applications-multimedia">
+      <item label="VLC media player" icon="vlc">
+        <action name="Execute">
+          <command>/usr/bin/vlc --started-from-file</command>
+        </action>
+      </item>
+    </menu>
+    <!-- Multimedia -->
+    <menu id="Office" label="Office" icon="applications-office">
+      <item label="Obsidian" icon="obsidian">
+        <action name="Execute">
+          <command>/opt/Obsidian/obsidian</command>
+        </action>
+      </item>
+    </menu>
+    <!-- Office -->
+    <menu id="Settings" label="Settings" icon="preferences-desktop">
+      <item label="Additional Drivers" icon="jockey">
+        <action name="Execute">
+          <command>/usr/bin/software-properties-gtk --open-tab=4</command>
+        </action>
+      </item>
+      <item label="Desktop Preferences" icon="user-desktop">
+        <action name="Execute">
+          <command>pcmanfm --desktop-pref</command>
+        </action>
+      </item>
+      <item label="GTK Settings" icon="nwg-look">
+        <action name="Execute">
+          <command>nwg-look</command>
+        </action>
+      </item>
+      <item label="IBus Preferences" icon="ibus-setup">
+        <action name="Execute">
+          <command>ibus-setup</command>
+        </action>
+      </item>
+      <item label="Input Method" icon="input-keyboard">
+        <action name="Execute">
+          <command>im-config</command>
+        </action>
+      </item>
+      <item label="Labwc Tweaks" icon="labwc_tweaks">
+        <action name="Execute">
+          <command>labwc-tweaks</command>
+        </action>
+      </item>
+      <item label="Language Support" icon="preferences-desktop-locale">
+        <action name="Execute">
+          <command>/usr/bin/gnome-language-selector</command>
+        </action>
+      </item>
+      <item label="Software &amp; Updates" icon="software-properties">
+        <action name="Execute">
+          <command>software-properties-gtk</command>
+        </action>
+      </item>
+      <item label="Software Updater" icon="system-software-update">
+        <action name="Execute">
+          <command>/usr/bin/update-manager</command>
+        </action>
+      </item>
+    </menu>
+    <!-- Settings -->
+    <menu id="System" label="System" icon="applications-system">
+      <item label="Disk Usage Analyzer" icon="org.gnome.baobab">
+        <action name="Execute">
+          <command>baobab</command>
+        </action>
+      </item>
+      <item label="File Manager PCManFM" icon="system-file-manager">
+        <action name="Execute">
+          <command>pcmanfm</command>
+        </action>
+      </item>
+      <item label="Foot" icon="foot">
+        <action name="Execute">
+          <command>foot</command>
+        </action>
+      </item>
+      <item label="Foot Client" icon="foot">
+        <action name="Execute">
+          <command>footclient</command>
+        </action>
+      </item>
+      <item label="Foot Server" icon="foot">
+        <action name="Execute">
+          <command>foot --server</command>
+        </action>
+      </item>
+      <item label="Software &amp; Updates" icon="software-properties">
+        <action name="Execute">
+          <command>software-properties-gtk</command>
+        </action>
+      </item>
+      <item label="Software Updater" icon="system-software-update">
+        <action name="Execute">
+          <command>/usr/bin/update-manager</command>
+        </action>
+      </item>
+      <item label="Reconfigure" icon="labwc">
+        <action name="Reconfigure"/>
+      </item>
+      <item label="Exit labwc" icon="labwc">
+        <action name="Exit"/>
+      </item>
+      <item label="Lock screen" icon="labwc">
+        <action name="Execute" command="gtklock"/>
+      </item>
+      <item label="Poweroff" icon="labwc">
+        <action name="Execute" command="systemctl -i poweroff"/>
+      </item>
+    </menu>
+  </menu>
+</openbox_menu>

@@ -1,0 +1,98 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, Sans Regular;
+    font-size: 14px;
+}
+
+window#waybar {
+    background-color: #f6f5f4;
+    color: #000000;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+button {
+    background-color: #eeecea;
+    border: 1px solid #b2aca6;
+}
+
+button.active {
+background-color: #d6d1cd;
+}
+
+button.urgent {
+    background-color: #eb4d4b;
+}
+
+button.inactive:hover {
+    background-color: #efedeb;
+}
+#clock,
+#battery,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#tray,
+#power-profiles-daemon, 
+#custom-appmenu {
+    padding: 0 3px;
+    border: 1px solid transparent;
+/*  transition: all 0.2s ease;*/
+}
+
+#clock:hover,
+#battery:hover,
+#backlight:hover,
+#network:hover,
+#pulseaudio:hover,
+#wireplumber:hover,
+#tray:hover,
+#power-profiles-daemon:hover,
+#custom-appmenu:hover {
+  border-color: #b2aca6;
+  border-radius: 5px; /*TODO: Find out how to make sure the transition doesn't start from a right-angled box*/      
+}
+
+#custom-appmenu {
+    margin-left: 1px;
+    margin-right: 1px;
+    background-image: url("/home/adlaur/.config/waybar/labwc.svg");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+#clock {
+    margin-right: 3px;
+}
+
+/*#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/*@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}*/
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
