@@ -1,7 +1,7 @@
 # Example autostart file
 
-# Set background color.
-swaybg -c '#113344' >/dev/null 2>&1 &
+# Set background image.
+swaybg -i "/home/adlaur/.local/share/themes/labwc-xfce-adwaita/adwaita-morning.webp >/dev/null 2>&1 &
 
 # Configure output directives such as mode, position, scale and transform.
 # Use wlr-randr to get your output names
@@ -14,7 +14,6 @@ kanshi >/dev/null 2>&1 &
 
 # Launch a panel such as yambar or waybar.
 #xfce4-panel >/dev/null 2>&1 &
-waybar >/dev/null 2>&1 &
 
 # To delay the launch of a particular client it is suggested that the following
 # syntax is used: ( sleep X ; foo ) &

@@ -26,7 +26,7 @@
   </placement>
   <!-- <font><theme> can be defined without an attribute to set all places -->
   <theme>
-    <name>Adwaita-XFCE-Labwc</name>
+    <name>labwc-xfce-adwaita</name>
     <icon/>
     <fallbackAppIcon>labwc</fallbackAppIcon>
     <titlebar>
@@ -260,10 +260,7 @@
       <action name="PreviousWindow"/>
     </keybind>
     <keybind key="A-Return">
-      <action name="Execute" command="konsole"/>
-    </keybind>
-    <keybind key="A-d">
-      <action name="Execute" command="wmenu-run -i -f 'Adwaita Mono,13'"/>
+      <action name="Execute" command="foot"/>
     </keybind>
     <keybind key="A-l">
       <action name="Execute" command="gtklock"/>
